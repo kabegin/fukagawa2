@@ -146,9 +146,10 @@ day = new Date(hi(add));//iには'2007/5/5':'PHP攻略完了'の形式の前の�
       document.getElementById("all").innerHTML = k; 
 }
 $('td').live('click',function(){
+    alert("123");
     var $cur_td=$(this)[0];
     var $cur_tr=$(this).parent()[0];
-   // var a=$(this).text();
+   var b=$(this).text().substr(0,3);
     var a=$(this).parent("tr").css("background-color").toString();
     if(a=="rgb(255, 0, 0)"||a=="rgb(255, 192, 203)"){alert("日&祭");}else{
   //  if(a=="rgb(255, 192, 203)"){alert("祭");}
@@ -157,7 +158,7 @@ $('td').live('click',function(){
  //   var r = tmp[1];
   //  var g = tmp[2];
 //    var b = tmp[3];
-  //  alert(r+g+b);
-})
+   alert(b);
+});
 
 
